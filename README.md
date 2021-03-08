@@ -1,2 +1,2 @@
 # partsOfVue
-its parts of vue
+Take apart Vue
