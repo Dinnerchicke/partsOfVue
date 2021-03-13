@@ -32,9 +32,31 @@ console.log('----------------------')
 
 // 单元测试：patch
 // 作用：输入新旧虚拟DOM，比较新旧DOM，让新节点上树
-patch(container,myHTest1)
+let myPatchTest1 = h('section',{},'文字A')
+let myPatchTest2 = h('section',{key:'B'},[
+  h('div',{key:'A'},[
+    h('div',{key:'B'},'xiaomi'),
+    h('div',{key:'C'},'sanxing'),
+  ]),
+  h('div',{key:'B'},'xiaomi'),
+  h('div',{key:'C'},'sanxing'),
+])
+let myPatchTest3 = h('section',{},[
+  h('div',{key:'A'},'apple'),
+  h('div',{key:'B'},'xiaomi'),
+  h('div',{key:'C'},'sanxing'),
+])
+let myPatchTest4 = h('section',{},[
+  h('div',{key:'A'},[
+    h('div',{key:'B'},'xiaomi'),
+    h('div',{key:'C'},'sanxing'),
+  ]),
+  h('div',{key:'B'},'xiaomi'),
+  h('div',{key:'C'},'sanxing'),
+])
+patch(container,myPatchTest3)
 btn.onclick = function () {
-  patch(myHTest1,myHTest2)
+  patch(myPatchTest3,myPatchTest4)
 }
 
 

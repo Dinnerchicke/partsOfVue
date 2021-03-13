@@ -26,6 +26,12 @@
 
 
 
+> 输入参数：oldVnode和newVnode
+
+![](0.picture/patch.png)
+
+
+
 > key的用处
 
 ```js
@@ -69,3 +75,9 @@ btn.onclick = function () {
 > 1. `key值很重要`，key值将diff前后的节点唯一标识，避免重复渲染
 > 2. 只有是`同一个虚拟节点`(选择器(如ol、ul等)和key相同)，才进行diff，不然直接回流。
 > 3. 只进行`同层比较`，如果多了一层，节点内容相同，也是不会diff，还是会回流。
+
+
+
+> diff的四指针四命中寻找子节点方法
+
+![](0.picture/diff.png)
