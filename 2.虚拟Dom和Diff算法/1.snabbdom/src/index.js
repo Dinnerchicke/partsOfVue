@@ -58,11 +58,3 @@ patch(container,myPatchTest3)
 btn.onclick = function () {
   patch(myPatchTest3,myPatchTest4)
 }
-
-
-
-
-// 
-
-// 添加和更新
-// 
